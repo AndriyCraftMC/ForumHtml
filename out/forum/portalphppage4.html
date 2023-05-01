@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Форум AndriyCraft</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name='title' content='Форум AndriyCraft'>
+<meta name='keywords' content='minecraftserver, andriycraft, minecraft, server, ac, ac20, форум andriycraft, форум, andriycraft forum, andriycraft forums, andriycrafts, ukraine, ua, first ukrainian server, ukrainian server, ukrainian minecraft server, forum, форум'>
+<meta name='robots' content='follow; index'>
+<meta name='description' content='Цей є форум першого українського Майнкрафт сервера. Тут ви можете розмовляти про сервер і взагалом про Майнкрафт'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="/cdn-cgi/apps/head/49KNk6obtyNm25fYzXs9z3MehMM.js"></script><script type="1e65d8078ba9cdb4ab12ee6c-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.js"></script>
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.plugins.min.js"></script>
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript" src="https://www.andriycraft.page/forum/jscripts/general.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/global.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/css3.css?t=1673468748" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/extra.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/responsive.css?t=1673468751" />
+<link rel="icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="shortcut icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript">
+	lang.unknown_error = "Сталась невідома помилка.";
+
+	lang.select2_match = "Одним з результатів доступний, натисніть клавішу ENTER, щоб вибрати його.";
+	lang.select2_matches = "{1} результатів доступні, використовуйте клавіші зі стрілками для переміщення в гору і вниз.";
+	lang.select2_nomatches = "Співпадінь не знайдено";
+	lang.select2_inputtooshort_single = "Будь ласка, введіть один або кілька символів";
+	lang.select2_inputtooshort_plural = "Будь ласка, введіть {1} або більше символів";
+	lang.select2_inputtoolong_single = "Будь ласка, видаліть один символ";
+	lang.select2_inputtoolong_plural = "Будь ласка, видаліть {1} символів";
+	lang.select2_selectiontoobig_single = "Можна вибрати тільки один елемент";
+	lang.select2_selectiontoobig_plural = "Можна вибрати тільки {1} елементів";
+	lang.select2_loadmore = "Завантаження додаткових результатів...";
+	lang.select2_searching = "Йде пошук...";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\"><strong>__title__</strong></td>\
+			</tr>\
+			<tr>\
+				<td class=\"trow1\">__message__</td>\
+			</tr>\
+			<tr>\
+				<td class=\"tfoot\">\
+					<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div>\
+				</td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = ".andriycraft.page";
+	var cookiePath = "/forum/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "1";
+	var deleteevent_confirm = "Ви впевнені, що хочете видалити цю подію?";
+	var removeattach_confirm = "Ви впевнені, що хочете видалити обрані вкладення з цього допису?";
+	var loading_text = 'Завантаження.<br />Будь ласка, зачекайте..';
+	var saving_changes = 'Збереження змін...';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "5d269ae2c35d20963e4d46e2954ef720";
+	var rootpath = "https://www.andriycraft.page/forum";
+	var imagepath = "https://www.andriycraft.page/forum/images";
+  	var yes_confirm = "Так";
+	var no_confirm = "Ні";
+	var MyBBEditor = null;
+	var spinner_image = "https://www.andriycraft.page/forum/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+</script>
+
+</head>
+<body>
+
+<div id="container">
+<div id="header">
+<div id="panel">
+<div class="upper">
+<div class="wrapper">
+
+<div class="float_right" id="guest_info_header">
+<a href="https://www.andriycraft.page/forum/member.php?action=login" class="login"><i class="fas fa-key"></i>&nbsp; Увійти</a>
+<a href="https://www.andriycraft.page/forum/member.php?action=register" class="register">Реєстрація</a>
+</div>
+<div class="title-img title-img-guest"><a href="index.php"><img src="images/roundo/darko/roundo-darko-logo.png" id="header_logo"></a></div>
+<ul class="menu top_links float_left">
+<li><a href="https://www.andriycraft.page/forum/index.php">Головна сторінка</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php">Пошук</a></li>
+<li><a href="https://www.andriycraft.page/forum/memberlist.php?sort=lastvisit&order=descending">Користувачі</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php?action=getnew">Нові пости</a></li>
+</ul>
+</div>
+</div>
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript">
+    $(document).ready(function (){
+        $("#welcomemsg").css("display", "block");
+		$("#newthread_guest_text").css("display", "inline-block");
+    });
+</script>
+
+</div>
+<div class="mobile_header mobile_only">
+<center>
+<div class="show_hide_mobile_header"><i class="fas fa-bars" style="font-size:10px;"></i>Меню
+</div>
+</center>
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript">$('.show_hide_mobile_header').click(function () {
+                            $('#mobile_header_links').slideToggle();
+                        });</script>
+<div id="mobile_header_links" style="display:none;">
+<a href="index.php"><i class="fas fa-home fa-fw"></i>Головна сторінка</a>
+<a href="search.php"><i class="fas fa-search fa-fw"></i>Пошук</a>
+<a href="memberlist.php?sort=lastvisit&order=descending"><i class="fas fa-users fa-fw"></i>Учасники</a>
+<a href="search.php?action=getnew" style="border-bottom: none;"><i class="fas fa-comments fa-fw"></i>Нові пости</a>
+</div>
+</div>
+</div>
+<div id="content">
+<div class="wrapper">
+
+
+<br />
+
+<div class="sidebar">
+<h1>Категорії</h1>
+<div id="new-projects"><img src="images/roundo/spinner_big.gif" id="jquery_spinner_load"></div>
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript">
+$( "#new-projects" ).load( "index.php #category-list-index" );
+</script>
+</div>
+<div class="forums">
+<div id="portal_threads">
+<table width="100%" cellspacing="0" cellpadding="5" border="0" align="center">
+<tr>
+<td valign="top">
+<h1>Останні теми</h1>
+
+<div class="pagination">
+
+<a href="portal.php?page=3" class="pagination_previous"><i class="fas fa-long-arrow-alt-left"></i> Попередня</a>
+
+<a href="portal.php" class="pagination_page">1</a>
+
+<a href="portal.php?page=2" class="pagination_page">2</a>
+
+<a href="portal.php?page=3" class="pagination_page">3</a>
+
+<span class="pagination_current">4</span>
+
+<a href="portal.php?page=5" class="pagination_page">5</a>
+
+<a href="portal.php?page=6" class="pagination_page">6</a>
+
+<a href="portal.php?page=7" class="pagination_page">7</a>
+
+<a href="portal.php?page=8" class="pagination_page">8</a>
+
+<a href="portal.php?page=9" class="pagination_page">9</a>
+
+<a href="portal.php?page=10" class="pagination_page">10</a>
+
+<a href="portal.php?page=11" class="pagination_page">11</a>
+
+<a href="portal.php?page=12" class="pagination_page">12</a>
+
+<a href="portal.php?page=13" class="pagination_page">13</a>
+
+<a href="portal.php?page=14" class="pagination_page">14</a>
+
+<a href="portal.php?page=15" class="pagination_page">15</a>
+
+<a href="portal.php?page=16" class="pagination_page">16</a>
+
+<a href="portal.php?page=5" class="pagination_next">Наступна <i class="fas fa-long-arrow-alt-right"></i></a>
+
+</div>
+<br>
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=168"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 08-07-2022, 01:01 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<ul class="mycode_list"><li>Скайблок: Новий, гарний префікс на аукціоні<br />
+Скайблок: Видалено мінімагазмн (був замінений ауціоном і нормальним магазином)<br />
+Скайблок: Поправлено граматичні помилки<br />
+Скайблок: Добавлено нові команди в /is help<br />
+Правила сервера: Добавлено нові правила<br />
+Магазин: Пофікшено баг, що деякі придмети іноді після покупки видавались 2 рази<br />
+Магазин: Добавлено підказку стільки людині ще треба копійок для покупки<br />
+Скайблок: Після телепортації на острів тепер є тайтил: "Скайблок" "/is help для допомоги"<br />
+Скайблок: Тепер можна ресетати острів 5 разів, а не 3<br />
+Скайблок (лоббі): Видалено непотрібні NPC (наприклад: "Лоббі", "Допомога")<br />
+Скайблок (лоббі): Всі NPC тепер розташовані нормально<br />
+Скайблок (лоббі): Новий дезайн лоббі<br />
+Скайблок: Пофікшено баги, граматичні помилки з деякими челенджами<br />
+Murder Mystery: Оновлено дизайн ScoreBoard (знову)<br />
+</li>
+</ul>
+<br />
+Ми тепер маємо наш Діскорд: <a href="https://discord.gg/QfVZphbkfT" target="_blank" rel="noopener" class="mycode_url">https://discord.gg/QfVZphbkfT</a></p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=168" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=168"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=167"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 08-03-2022, 09:22 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<ul class="mycode_list"><li>Скайварс: Пофікшено баг, що повідомлення '*гравець* задихнувся' появлялося коли гравець падав в пустоту<br />
+</li>
+<li>Бедварс: Пофікшено баг, що тайтил 'Респавн через: X' появлявся піся кінця гри<br />
+</li>
+<li>Бедварс: Пофікшено баг, що статистика появляласья два рази, а не один (при нажиманні на NPC)<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=167" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=167"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=166"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-31-2022, 11:56 AM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<ul class="mycode_list"><li>SkyWars: Оновлено команду /sw<br />
+</li>
+<li>SkyWars (/sw): Добавлено пасхалку<br />
+</li>
+<li>SkyWars (/sw): Добавлено /sw quit<br />
+</li>
+<li>SkyWars (/sw): Новий дезайн команди<br />
+</li>
+<li>SkyWars (/sw): Пофікшено /sw top<br />
+</li>
+<li>SkyWars: Добавлено новий набір<br />
+</li>
+<li>The Bridge: Пофікшено неперекладене повідомлення<br />
+</li>
+<li>The Bridge: Пропатчено експлоїт Log4JShell<br />
+</li>
+<li>The Bridge: Поправлено граматичну помилку в назві набіра<br />
+</li>
+<li>Дуелі: Поправлено деякі граматичні помилки<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=166" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=166"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=165"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-30-2022, 12:39 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<ul class="mycode_list"><li>bukkit.yml: Поправлено неперекладене повідомлення вимкнення сервера<br />
+paper.yml: Поправлено неперекладене повідомлення кіка за флай<br />
+paper.yml: Поправлено неперекладене повідомлення кіка за Boat fly<br />
+Захист сервера: Пофікшено баг, що 2 повідомлення в секунду = кік<br />
+AuthMe: Поправлено неперекладене повідомлення<br />
+AuthMe: Пофікшено баг, що тимчасовий баг з взлом акаунтів не працював <br />
+Захист сервера: Оновлено повідомлення кіку за експлоїт UUID spoofing:<br />
+| no-data-kick-message: "&amp;cНевдалося авторизуватися - Виявлено експлоїт UUID spoofing. Данні не було передано через проксі"<br />
+| invalid-token-kick-message: "&amp;cНевдалося авторизуватися - Виявлено експлоїт UUID spoofing. Хороша спроба зайти на сервер через фейковий BungeeCord"<br />
+Анти чит: /pl більше не кікає з сервера, а показує це повідомлення:<br />
+"В вас нема дозволу дивитись на наш список плагінів"<br />
+Анти чит: Нове повідомлення про попередження про спам:<br />
+"Заблоковано спам! Будь ласка прочитайте наші правила: /rules. Якщо ви далі будете спамити, то отримаєте кік. А в гіршому випадку бан"<br />
+Топ багачів сервера: Оновлено топ багачів<br />
+Система друзів: Повідомлення '[Ім'я гравця] приєднався до паті!' тепер в зеленому колірі<br />
+Система друзів: Пофікшено баг, що кнопка прийняти була в оранжевому колірі (тепер повна в зеленому)<br />
+Система друзів: Тепер якщо ви хочете написати в паті чат, але ви не в паті вам видає це повідомлення: 'В не в паті!'<br />
+Система друзів: Пофікшено експлоіт, що можна було залишатися на любій грі після її кінця через паті<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=165" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=165"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=164"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-24-2022, 09:19 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<ul class="mycode_list"><li>Система друзів: Поправлено деякі, функції, які можуть бути не зрозумілими для деяких гравців<br />
+</li>
+<li>Система друзів: Редизайн всіх повідомлень<br />
+</li>
+<li>Система друзів: [/f help] --&gt; Замість '/friend add' і інших суб-команд тепер '/f add'<br />
+</li>
+<li>Система друзів: [/f help] --&gt; Редизайн команди<br />
+</li>
+<li>Система друзів: [/p help] --&gt; Замість '/party add' і інших суб-команд тепер '/party add'<br />
+</li>
+<li>Система друзів: [/p help] --&gt; Редизайн команди<br />
+</li>
+<li>Система друзів: Поправлено баг з статусами<br />
+</li>
+<li>Система друзів: Оновлено опис деяких функцій<br />
+</li>
+<li>Система друзів: Добавлено пояснення, що таке паті<br />
+</li>
+<li>Система друзів: Тепер більше не обов'язково бути другом гравця, щоб добавити гравця в паті<br />
+</li>
+<li>Система друзів: Статус тепер може мати максимум 25 символів<br />
+</li>
+<li>Система друзів: Добавлено підтримку колірів: (&amp;c, &amp;e)<br />
+</li>
+<li>Система друзів: Новий дизайн: Оновлено меню новим, гарним дизайном<br />
+</li>
+<li>Система друзів: Новий дизайн: Оновлено кольори з холодних синіх і сірих до теплих жовтих і оранжевих<br />
+</li>
+<li>Система друзів: Максимум друзів тепер можна мати 500<br />
+</li>
+<li>Система друзів: Добавлено /friends як аліас<br />
+</li>
+<li>Система друзів: Добавлено /frs як аліас<br />
+</li>
+<li>Система друзів: Добавлено /fs як аліас<br />
+</li>
+<li>Система друзів: Пофікшено баг що кнопки 'Попередня сторінка' і 'Наступна сторінка' були перепитаними<br />
+</li>
+<li>Система друзів: Добавлено інструкцію як користуватися паті-чатом<br />
+</li>
+<li>Система друзів: Добавлено інструкцію як користуватися чатом з друзями<br />
+</li>
+<li>Система друзів: Оновлено дизайн паті-чата<br />
+</li>
+<li>Система друзів: Оновлено дизайн чата з друзями<br />
+</li>
+<li>Система друзів: Пофікшено баг, що учасники паті не могли пвпшитись<br />
+</li>
+<li>Система друзів: Оновлено чат фільтр (тепер він блокує расизм)<br />
+</li>
+<li>Система друзів: Пофікшено обхід чат фільтра в паті чаті<br />
+</li>
+<li>Система друзів: Максимум учасників в паті тепер 5<br />
+</li>
+<li>Система друзів: Кнопки 'Попередня сторінка' і 'Наступна сторінка' тепер мають нормальну текстуру<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=164" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=164"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=162"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-18-2022, 07:08 AM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<ul class="mycode_list"><li>Скайблок: Опис команди /island invite є в білому колірні, хоча всі опис інших команд в жовтому (@mm13)<br />
+</li>
+<li>Скайблок: /is invite має неперекладеною частину повідомлення (@mm13)<br />
+</li>
+<li>Бедварс: Добавлено нові блоки в магазин<br />
+</li>
+<li>Бедварс: Добавлено нову броню в магазин<br />
+</li>
+<li>Бедварс: Добавлено нові кірки в магазин<br />
+</li>
+<li>Бедварс: Видалено деякі непотрібні предмети з магазина<br />
+</li>
+<li>Бедварс: Пофікшено баг з блокувачом стріл<br />
+</li>
+<li>Бедварс: Оновлено дизайн магазина<br />
+</li>
+<li>Бедварс: Час захисту від смерті тепер - 3 секунди<br />
+</li>
+<li>Бедврас: Пофікшено баг з тимчасовою платформою<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=162" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=162"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/images/default_avatar.png" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=161"><h2 style="margin:0px;display:inline-block;">Що трапилось з сервером?</h2></a><br>
+<h4>Обговорення сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+1 відповідей(дь)
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=12">Hesus</a>, 07-17-2022, 04:42 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;">Що трапилось з сервером?<br />
+тех робити?</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=161" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=161"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=159"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-14-2022, 07:00 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<ul class="mycode_list"><li>Дуелі: Пофікшено баг що повідомлення перезавантаження сервера дуелей було не перекладено<br />
+BedWars:  Пофікшено баг що повідомлення '<span style="color: #c10300;" class="mycode_color">Ви вже в команді</span>' було в зеленому колірі<br />
+Скайблок: Пофікшено баг що тайтил '<span style="color: #e8c500;" class="mycode_color">Скайблок</span>' ніколи не пропадало з екрана<br />
+AuthMe: Пофікшено баг що якщо дуже швидко зареєструватися, то поді ваш акаунт не збережеться<br />
+AuthMe: Поправлено неперекладне повідомлення від AuthMe.<br />
+Інше: Пофікшено баг що одна помилка оновлення скіна набула перекладеною<br />
+The Bridge: Видалено дуже старі акаунти зі статистики<br />
+Скайблок: Оновлено мінімагазин<br />
+BedWars: '<span style="color: #cccccc;" class="mycode_color">Жилізо</span>' тепер '<span style="color: #cccccc;" class="mycode_color">Залізо</span>'<br />
+BedWars: Поправлено граматичну помилку в магазині<br />
+/rules: Оновлено дизайн<br />
+/rules: Добавлено нові правила<br />
+/rules: Видалено деякі старі правила<br />
+/rules: Тепер розписано все зрозуміло<br />
+/menu: '<span style="color: #ff851b;" class="mycode_color">Меню AndriyCraft</span>' тепер '<span style="color: #e86e04;" class="mycode_color">Мініігри AndriyCraft-а</span>'<br />
+/menu: Пофікшено баг, що кнопка 'The Bridge' не працювала<br />
+Захист сервера: Пропатчено нові експлоїти:<br />
+- Фантомна книга<br />
+- Forceop за допомогою модифікації пакету редагування команди в командному блоці<br />
+BedWars: Змінено опис категорії '<span style="color: #e86e04;" class="mycode_color">Броня</span>': Опис '<span style="color: #e86e04;" class="mycode_color">Тут є вся броня</span>.' тепер '<span style="color: #e86e04;" class="mycode_color">Тут є вся броня (логічно)</span>'<br />
+Murder Mystery: Очищено статистику від дуже старих акаунтів (1-2 роки)<br />
+Murder Mystery: Повідомлення '<span style="color: #e82a1f;" class="mycode_color">Неправильна статистика. Правильні: ...</span>'  тепер '<span style="color: #c10300;" class="mycode_color">Неправильна статистика. Приклад правильних:</span> <span style="color: #c10300;" class="mycode_color">...</span>'<br />
+Murder Mystery: Повідомлення <span style="color: #4cea5e;" class="mycode_color">'Murder Mystery арени</span>' тепер <span style="color: #e86e04;" class="mycode_color">'Арени Murder Mystery</span>'<br />
+Murder Mystery: Пофікшено баг з /mm help<br />
+Murder Mystery: Добавлено /mm stats &lt;нік гравця&gt; в список команд<br />
+Murder Mystery: Повідомлення '<span style="color: #e82a1f;" class="mycode_color">за те що [кількість] невинних ви</span><span style="color: #c10300;" class="mycode_color">х</span><span style="color: #e82a1f;" class="mycode_color">или</span>' тепер <span style="color: #c10300;" class="mycode_color">'за те що <span style="color: #e82a1f;" class="mycode_color">[кількість]</span> невинних вижили</span>'<br />
+Murder Mystery: Повідомлення '<span style="color: #c10300;" class="mycode_color">роль [роль] вийшла</span>' тепер <span style="color: #c10300;" class="mycode_color">'Гравець з ролю [роль] вийшов з гри</span>'<br />
+Murder Mystery: Повідомлення '<span style="color: #ff4136;" class="mycode_color">Вибір нової ролі для [роль]'</span> тепер <span style="color: #e82a1f;" class="mycode_color">'Вибір нового гравця для ролі [роль]</span>'<br />
+Murder Mystery: Повідомлення '<span style="color: #ff851b;" class="mycode_color">Вбивця отримає свій меч за [час] секунд!</span>' тепер '<span style="color: #ff851b;" class="mycode_color">Вбивця отримає свій меч через [час] секунд!</span>'<br />
+Murder Mystery: Видалено винагороду за програш в грі<br />
+Murder Mystery: За вбивство (коли ти вбивця) винагорода тепер 15 коп., а не 23<br />
+Murder Mystery (статистика): '<span style="color: #c14700;" class="mycode_color">Найвищий бал</span>' тепер '<span style="color: #c14700;" class="mycode_color">Найвищий рахунок</span>'<br />
+Античит: Пофікшено обхід анти сама в чаті<br />
+Античит: Пофікшено обхід швидкого перепідключення<br />
+Античит: Поправлено всякі маленькі баги, і граматичні помилки<br />
+SkyWars: Набір 'Жилізна броня' тепер названий 'Залізна броня'<br />
+SkyWars: В набірі 'Стріляльнк' більше нема золотого яблука<br />
+Щоденні винагороди: '<span style="color: #e86e04;" class="mycode_color">Винагороди</span>' тепер '<span style="color: #ffa339;" class="mycode_color">Щоденні винагороди</span>'<br />
+Щоденні винагороди: '<span style="color: #c14700;" class="mycode_color"><span style="color: #e86e04;" class="mycode_color">Винагорода</span></span>' тепер '<span style="color: #005dc2;" class="mycode_color">Основна винагорода</span>'<br />
+Щоденні винагороди: Поправлено граматичну помилку в описі<br />
+Щоденні винагороди: Винагорода тепер видається після повідомлення '<span style="color: #e86e04;" class="mycode_color">Винагорода забрана</span>'<br />
+Щоденні винагороди: '<span style="color: #e86e04;" class="mycode_color">Додаткова винагорода</span>' тепер дає 10 копійок, а не 15<br />
+AuthMe: Максимум акаунтів на сервері тепер 10<br />
+Murder Mystery: Детектив тепер має 64 стріл<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=159" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=159"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=158"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-08-2022, 10:52 AM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<br />
+<ul class="mycode_list"><li>Limbo: Оновлено посилання на форум<br />
+</li>
+<li>Limbo: Добавлено The Bridge в виняток перепідключення<br />
+</li>
+<li>Limbo: Добавлено дуелі в виняток перепідключення<br />
+</li>
+<li>Дуелі: Пофікшено баг через який можна було побачити плагіни сервера<br />
+</li>
+<li>Дуелі: Пофікшено баг через який можна було вийти за карту<br />
+</li>
+<li>The Bridge: Поправлено опичатку в описі набіра<br />
+</li>
+<li>The Bridge: Оптимізовано гру<br />
+</li>
+<li>Лоббі: Добавлено факіла, щоб в ночі не було тьмяно<br />
+</li>
+<li>Топ багачів сервера: "<span style="color: #ff851b;" class="mycode_color">Топ багачів сервера</span>" тепер "<span style="color: #e86e04;" class="mycode_color">Топ багачів сервера:</span>"<br />
+</li>
+<li>Топ багачів сервера: Гравець Kinash___ тепер має 5,105 копійок<br />
+</li>
+<li>Топ багачів сервера: Гравець tatitopro155 тепер має 2,152 копійки<br />
+</li>
+<li>Топ багачів сервера: Гравець mmddll тепер має 1,672 копійки<br />
+</li>
+<li>Топ багачів сервера: Гравець petitolgamer тепер має 1,461 копійки<br />
+</li>
+<li>Топ багачів сервера: Гравець phuong_2k8 тепер має 824 копійок<br />
+</li>
+<li>Топ багачів сервера: Гравець 666ueffe666 тепер має 741 копійок<br />
+</li>
+<li>Топ багачів сервера: Гравець sussybakq68 тепер має 704 копійок<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=158" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=158"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<table cellspacing="0" cellpadding="5" class="tborder radiused">
+<tr>
+<td class="trow1" style="padding:0px;">
+<table border="0" cellpadding="5" class="tfixed" style="width: 100%;">
+<tr>
+<td class="trow1 scaleimages no_bottom_border" valign="top">
+<img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" class="rounded-avatar box_shadowed avatar_white_border" style="width:50px;height:50px;float:left;border-width:5px;margin-bottom:10px;margin-right:10px;margin-top:5px;" />
+<a href="https://www.andriycraft.page/forum/showthread.php?tid=157"><h2 style="margin:0px;display:inline-block;">Оновлення сервера AndriyCraft</h2></a><br>
+<h4>Новини сервера &nbsp;&nbsp; <i class="far fa-comment-alt"></i>
+Немає відповідей
+</h4>
+<a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>, 07-04-2022, 04:19 PM
+<div class="border_sep" style="margin-top:10px;">
+</div>
+<p class="portal-message" style="max-height:300px;overflow:hidden;"><span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<br />
+<ul class="mycode_list"><li>Лоббі: Команда /tb знову працює<br />
+Лоббі: Команда /thebridge знову працює<br />
+SkyWars: '<span style="color: #c0f0c6;" class="mycode_color">Виберіть набір</span>' тепер '<span style="color: #c0f0c6;" class="mycode_color">Вибрати набір</span>'  <br />
+The Bridge: Поправлено граматичну помилку в слові '<span style="color: #ff851b;" class="mycode_color">Куплено</span>': Було написано через И<br />
+The Bridge: Поправлено граматичну помилку в слові '<span style="color: #ff851b;" class="mycode_color">Придмети</span>': Було написано через И<br />
+The Bridge: Поправлено граматичну помилку в слові '<span style="color: #ff4136;" class="mycode_color">ХП</span>': Було написано маленькими буквами<br />
+The Bridge: Поправлено граматичну помилку в слові '<span style="color: #c14700;" class="mycode_color">Дерев'яний меч</span>': було написано з маленької букви та без апострофа<br />
+The Bridge: Поправлено помилку '<span style="color: #d9f4ff;" class="mycode_color">Жилізний меч</span>' тепер '<span style="color: #eeeeee;" class="mycode_color">Залізний меч</span>'<br />
+The Bridge: Набір <span style="color: #fffa1e;" class="mycode_color">'OP набір</span>' тепер названий '<span style="color: #eeeeee;" class="mycode_color">Залізна броня</span>'<br />
+The Bridge: Очищено статистику від пустих акаунтів<br />
+The Bridge: Пофікшено баг з пустим повідомленням<br />
+The Bridge: Поправлено неперекладене '<span style="color: #ffdc00;" class="mycode_color">Режим: HEARTS</span>' В scoreboard<br />
+The Bridge: Пофікшено баг з описом наборів:<br />
+Наприклад: В набора '<span style="color: #ffdc00;" class="mycode_color">OP набір</span>' був опис від набіра '<span style="color: #e82a1f;" class="mycode_color">Хардкор</span>'<br />
+The Bridge: Пофікшено баг з чатом<br />
+The Bridge: Поправлено ужасний дизайн чату в лоббі гри<br />
+The Bridge: Поправлено ужасний дизайн чату коли ви глядач<br />
+The Bridge: Пофікшено баг коли ви могли виграти випадково в грі<br />
+The Bridge: Пофікшено баг з тим що ScoreBoard міг пропасти<br />
+The Bridge: Поправлено що повідомлення: '<span style="color: #e82a1f;" class="mycode_color">Сервер вимкнено</span>' було не в червоному кольору<br />
+The Bridge: Оновлено дизайн набірів<br />
+The Bridge: Було видалено деякі дуже нечесні набори (1)<br />
+Дуелі: Слово '<span style="color: #2ecc40;" class="mycode_color">перемоги</span>' було написано як '<span style="color: #2ecc40;" class="mycode_color">перемоаги</span>'<br />
+The Bridge: Поправлено баг через який в деяких наборах було написано неправильні предмети<br />
+</li>
+</ul>
+</p>
+<br><a href="https://www.andriycraft.page/forum/showthread.php?tid=157" style="padding:10px 0px;margin-right:18px;"><i class="fas fa-external-link-square-alt"></i>&nbsp; Відкрити</a>
+<a href="newreply.php?tid=157"><button class="button"><i class="far fa-edit"></i>&nbsp; Відповісти</button></a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br />
+
+<center>
+<div class="pagination">
+
+<a href="portal.php?page=3" class="pagination_previous"><i class="fas fa-long-arrow-alt-left"></i> Попередня</a>
+
+<a href="portal.php" class="pagination_page">1</a>
+
+<a href="portal.php?page=2" class="pagination_page">2</a>
+
+<a href="portal.php?page=3" class="pagination_page">3</a>
+
+<span class="pagination_current">4</span>
+
+<a href="portal.php?page=5" class="pagination_page">5</a>
+
+<a href="portal.php?page=6" class="pagination_page">6</a>
+
+<a href="portal.php?page=7" class="pagination_page">7</a>
+
+<a href="portal.php?page=8" class="pagination_page">8</a>
+
+<a href="portal.php?page=9" class="pagination_page">9</a>
+
+<a href="portal.php?page=10" class="pagination_page">10</a>
+
+<a href="portal.php?page=11" class="pagination_page">11</a>
+
+<a href="portal.php?page=12" class="pagination_page">12</a>
+
+<a href="portal.php?page=13" class="pagination_page">13</a>
+
+<a href="portal.php?page=14" class="pagination_page">14</a>
+
+<a href="portal.php?page=15" class="pagination_page">15</a>
+
+<a href="portal.php?page=16" class="pagination_page">16</a>
+
+<a href="portal.php?page=5" class="pagination_next">Наступна <i class="fas fa-long-arrow-alt-right"></i></a>
+
+</div>
+</center>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<br clear="all">
+<script type="1e65d8078ba9cdb4ab12ee6c-text/javascript">
+    $(document).scroll(function () {
+        var wd = $(this).scrollTop();
+        if (wd > 500) {
+            $('.backtop').show();
+        } else {
+            $('.backtop').hide();
+        }
+    });
+    jQuery(function ($) {
+        $(".leftbutton").hide();
+        $(".rightbutton").on("click", function () {
+            $(".sidebar").animate({
+                height: "hide",
+                opacity: 0
+            }, 150, function () {
+                $(".forums").animate({
+                    width: "100%"
+                }, 400)
+            });
+            $(this).hide();
+            $(".leftbutton").show();
+            Cookie.set("sidebar", "collapsed", 60 * 60 * 24 * 365);
+            return false;
+        });
+        $(".leftbutton").on("click", function () {
+            $(".forums").animate({
+                width: "76%"
+            }, 400, function () {
+                $(".sidebar").animate({
+                    height: "show",
+                    opacity: 1
+                }, 150)
+            });
+            $(this).hide();
+            $(".rightbutton").show();
+            Cookie.set("sidebar", "expanded", 60 * 60 * 24 * 365);
+            return false;
+        });
+        if (Cookie.get("sidebar") == "collapsed") {
+            $(".rightbutton").hide();
+            $(".leftbutton").show();
+            $(".forums").css("width", "100%");
+            $(".sidebar").hide();
+        }
+        if ($(".forums").length < 1) $(".toggle-container").hide();
+    });
+</script>
+</div>
+</div>
+<a href="#" class="backtop"><span id='backtop'><i class="fas fa-arrow-up backtop-icon" aria-hidden="true" style="font-size:20px;"></i></span></a>
+<div id="footer">
+<div class="attribute_footer">
+<img src="images/roundo/darko/roundo-darko-logo.png" class="footer_logo"><br>
+Тема від <a href="https://bitoony.com" target="_blank">Bitoony</a>, &copy;2021-2023
+<br>
+Працює на <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, &copy; 2002-2023.
+<br>
+<a href="https://andriycraft.page" target="_blank">AndriyCraft </a>, &copy;2020-2023
+</div>
+<div class="footer_links" style="margin-left: 20px">
+
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=18">Підтримка</a>
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=8">Новини сервера</a>
+<a href="https://www.andriycraft.page/forum/misc.php?action=markread">Позначити всі суб-форуми прочитаними</a>
+
+<p>Відновити акаунт? Подати апеляцію на бан? Маєте якесь питання? Зв'яжіться з нами тут:
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4d5d0d9dddaf4d5dad0c6ddcdd7c6d5d2c09ac4d5d3d1">[email&#160;protected]</a></p>
+</div>
+
+<img src="https://www.andriycraft.page/forum/task.php" width="1" height="1" alt="" />
+
+</div>
+<br><br>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="1e65d8078ba9cdb4ab12ee6c-|49" defer=""></script></body>
+</html>

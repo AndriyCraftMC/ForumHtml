@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Оновлення сервера AndriyCraft</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name='title' content='Форум AndriyCraft'>
+<meta name='keywords' content='minecraftserver, andriycraft, minecraft, server, ac, ac20, форум andriycraft, форум, andriycraft forum, andriycraft forums, andriycrafts, ukraine, ua, first ukrainian server, ukrainian server, ukrainian minecraft server, forum, форум'>
+<meta name='robots' content='follow; index'>
+<meta name='description' content='Цей є форум першого українського Майнкрафт сервера. Тут ви можете розмовляти про сервер і взагалом про Майнкрафт'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="/cdn-cgi/apps/head/49KNk6obtyNm25fYzXs9z3MehMM.js"></script><script type="04bf7e925cabf659bda6c7ee-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.js"></script>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.plugins.min.js"></script>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript" src="https://www.andriycraft.page/forum/jscripts/general.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/global.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme1/star_ratings.css?t=1673562068" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/showthread.css?t=1673468751" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/css3.css?t=1673468748" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/extra.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/responsive.css?t=1673468751" />
+<link rel="icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="shortcut icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">
+	lang.unknown_error = "Сталась невідома помилка.";
+
+	lang.select2_match = "Одним з результатів доступний, натисніть клавішу ENTER, щоб вибрати його.";
+	lang.select2_matches = "{1} результатів доступні, використовуйте клавіші зі стрілками для переміщення в гору і вниз.";
+	lang.select2_nomatches = "Співпадінь не знайдено";
+	lang.select2_inputtooshort_single = "Будь ласка, введіть один або кілька символів";
+	lang.select2_inputtooshort_plural = "Будь ласка, введіть {1} або більше символів";
+	lang.select2_inputtoolong_single = "Будь ласка, видаліть один символ";
+	lang.select2_inputtoolong_plural = "Будь ласка, видаліть {1} символів";
+	lang.select2_selectiontoobig_single = "Можна вибрати тільки один елемент";
+	lang.select2_selectiontoobig_plural = "Можна вибрати тільки {1} елементів";
+	lang.select2_loadmore = "Завантаження додаткових результатів...";
+	lang.select2_searching = "Йде пошук...";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\"><strong>__title__</strong></td>\
+			</tr>\
+			<tr>\
+				<td class=\"trow1\">__message__</td>\
+			</tr>\
+			<tr>\
+				<td class=\"tfoot\">\
+					<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div>\
+				</td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = ".andriycraft.page";
+	var cookiePath = "/forum/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "1";
+	var deleteevent_confirm = "Ви впевнені, що хочете видалити цю подію?";
+	var removeattach_confirm = "Ви впевнені, що хочете видалити обрані вкладення з цього допису?";
+	var loading_text = 'Завантаження.<br />Будь ласка, зачекайте..';
+	var saving_changes = 'Збереження змін...';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "ce0ae27a3386e97f6b302a4ef11e7a6e";
+	var rootpath = "https://www.andriycraft.page/forum";
+	var imagepath = "https://www.andriycraft.page/forum/images";
+  	var yes_confirm = "Так";
+	var no_confirm = "Ні";
+	var MyBBEditor = null;
+	var spinner_image = "https://www.andriycraft.page/forum/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+</script>
+
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">
+	var quickdelete_confirm = "Ви впевнені, що хочете видалити цей допис?";
+	var quickrestore_confirm = "Ви впевнені, що хочете відновити цей допис?";
+	var allowEditReason = "1";
+	lang.save_changes = "Зберегти зміни";
+	lang.cancel_edit = "Скасувати редагування";
+	lang.quick_edit_update_error = "Під час редагування вашої відповіді сталася помилка:";
+	lang.quick_reply_post_error = "Під час надсилання вашої відповіді сталася помилка:";
+	lang.quick_delete_error = "Під час видалення вашої відповіді сталася помилка:";
+	lang.quick_delete_success = "Допис був успішно видалений.";
+	lang.quick_delete_thread_success = "Тема успішно видалена.";
+	lang.quick_restore_error = "Під час відновлення вашої відповіді сталася помилка:";
+	lang.quick_restore_success = "Цей допис був успішно відновлений.";
+	lang.editreason = "Причина редагування";
+	lang.post_deleted_error = "Ви не можете виконати цю дію для видаленого допису.";
+	lang.softdelete_thread = "М’яко видалити тему";
+	lang.restore_thread = "Відновити тему";
+</script>
+
+<script type="04bf7e925cabf659bda6c7ee-text/javascript" src="https://www.andriycraft.page/forum/jscripts/report.js?ver=1820"></script>
+<script src="https://www.andriycraft.page/forum/jscripts/jeditable/jeditable.min.js" type="04bf7e925cabf659bda6c7ee-text/javascript"></script>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript" src="https://www.andriycraft.page/forum/jscripts/thread.js?ver=1822"></script>
+</head>
+<body>
+
+<div id="container">
+<div id="header">
+<div id="panel">
+<div class="upper">
+<div class="wrapper">
+
+<div class="float_right" id="guest_info_header">
+<a href="https://www.andriycraft.page/forum/member.php?action=login" class="login"><i class="fas fa-key"></i>&nbsp; Увійти</a>
+<a href="https://www.andriycraft.page/forum/member.php?action=register" class="register">Реєстрація</a>
+</div>
+<div class="title-img title-img-guest"><a href="index.php"><img src="images/roundo/darko/roundo-darko-logo.png" id="header_logo"></a></div>
+<ul class="menu top_links float_left">
+<li><a href="https://www.andriycraft.page/forum/index.php">Головна сторінка</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php">Пошук</a></li>
+<li><a href="https://www.andriycraft.page/forum/memberlist.php?sort=lastvisit&order=descending">Користувачі</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php?action=getnew">Нові пости</a></li>
+</ul>
+</div>
+</div>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">
+    $(document).ready(function (){
+        $("#welcomemsg").css("display", "block");
+		$("#newthread_guest_text").css("display", "inline-block");
+    });
+</script>
+
+</div>
+<div class="mobile_header mobile_only">
+<center>
+<div class="show_hide_mobile_header"><i class="fas fa-bars" style="font-size:10px;"></i>Меню
+</div>
+</center>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">$('.show_hide_mobile_header').click(function () {
+                            $('#mobile_header_links').slideToggle();
+                        });</script>
+<div id="mobile_header_links" style="display:none;">
+<a href="index.php"><i class="fas fa-home fa-fw"></i>Головна сторінка</a>
+<a href="search.php"><i class="fas fa-search fa-fw"></i>Пошук</a>
+<a href="memberlist.php?sort=lastvisit&order=descending"><i class="fas fa-users fa-fw"></i>Учасники</a>
+<a href="search.php?action=getnew" style="border-bottom: none;"><i class="fas fa-comments fa-fw"></i>Нові пости</a>
+</div>
+</div>
+</div>
+<div id="content">
+<div class="wrapper">
+
+
+<br />
+
+<center>
+<span style="font-size:14px;font-weight:300;"></span>
+<h1>Оновлення сервера AndriyCraft</h1>
+<span class="show_thread_stats">0 відповідей(і), 706 переглядів(а)</span>
+<div style="width:200px;">
+<a href="newreply.php?tid=51" class="button closed_button"><span>Тема закрита</span></a>&nbsp;
+</div>
+<br>
+</center>
+<table border="0" cellspacing="0" cellpadding="5" class="tborder tfixed clear no-bs" style="background:none;">
+<tr>
+<td id="posts_container">
+<div id="posts">
+<a name="pid72" id="pid72"></a>
+<div class="postbit_avatar_margins">
+<a href="member.php?action=profile&amp;uid=1"><img src="https://www.andriycraft.page/forum/uploads/avatars/avatar_1.jpg?dateline=1682929741" alt="" class="rounded-avatar box_shadowed avatar_white_border postbit_avatar" style="width:55px;height:55px;border-width:4px;" /></a>
+</div>
+<div class="post  box_shadowed" style="" id="post_72">
+<div class="post_content">
+<div class="post_author default_postbit">
+<div class="author_information" style="display:inline-block;">
+<h2 style="margin:0px;display:inline-block;"><a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1"><span style="color: #D61C4C;">kinash</span></a></h2>
+<a href="online.php" title="В мережі"><div class="postbit_status online"></div></a>
+ &nbsp; <small style="color:#999;" class="mobile_line_break">03-30-2022, 07:36 PM</small>
+<div class="smalltext description">
+Адмін<br />
+</div>
+</div>
+<div class="post_head" style="float:right;">
+
+<div class="float_right" style="vertical-align: top">
+<strong><a href="showthread.php?tid=51&amp;pid=72#pid72" title="Оновлення сервера AndriyCraft">#1</a></strong>
+</div>
+
+</div>
+</div>
+<div class="border_sep"></div>
+<div class="post_body scaleimages" id="pid_72" style="min-height: auto;">
+<span style="font-weight: bold;" class="mycode_b">Оновлення сервера AndriyCraft</span><br />
+<br />
+<span style="font-weight: bold;" class="mycode_b">Список змін:</span><br />
+<ul class="mycode_list"><li>Нарешті за пів року нова мініігра на сервері (дуелі)!<br />
+</li>
+<li>Пофікшено багато багів<br />
+</li>
+</ul>
+</div>
+<div class="post_meta" id="post_meta_72">
+<div class="float_right">
+</div>
+</div>
+<span class="post_edit" id="edited_by_72">
+<span class="edited_post">(Востаннє цей допис було редаговано:10-03-2022, 07:46 PM <a href="https://www.andriycraft.page/forum/member.php?action=profile&amp;uid=1">kinash</a>.)</span>
+</span>
+</div>
+<div class="post_controls">
+<div class="postbit_buttons post_management_buttons">
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</table>
+<center></center>
+<br />
+<div class="float_left">
+<ul class="thread_tools">
+
+<li class="printable"><a href="printthread.php?tid=51">Версія для друку</a></li>
+
+</ul>
+</div>
+<div class="float_right" style="text-align: right;">
+</div>
+<br class="clear" />
+
+<br />
+<span class="smalltext">Переглядають цю тему: Гості: 1</span>
+<br />
+
+
+<br clear="all">
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">
+    $(document).scroll(function () {
+        var wd = $(this).scrollTop();
+        if (wd > 500) {
+            $('.backtop').show();
+        } else {
+            $('.backtop').hide();
+        }
+    });
+    jQuery(function ($) {
+        $(".leftbutton").hide();
+        $(".rightbutton").on("click", function () {
+            $(".sidebar").animate({
+                height: "hide",
+                opacity: 0
+            }, 150, function () {
+                $(".forums").animate({
+                    width: "100%"
+                }, 400)
+            });
+            $(this).hide();
+            $(".leftbutton").show();
+            Cookie.set("sidebar", "collapsed", 60 * 60 * 24 * 365);
+            return false;
+        });
+        $(".leftbutton").on("click", function () {
+            $(".forums").animate({
+                width: "76%"
+            }, 400, function () {
+                $(".sidebar").animate({
+                    height: "show",
+                    opacity: 1
+                }, 150)
+            });
+            $(this).hide();
+            $(".rightbutton").show();
+            Cookie.set("sidebar", "expanded", 60 * 60 * 24 * 365);
+            return false;
+        });
+        if (Cookie.get("sidebar") == "collapsed") {
+            $(".rightbutton").hide();
+            $(".leftbutton").show();
+            $(".forums").css("width", "100%");
+            $(".sidebar").hide();
+        }
+        if ($(".forums").length < 1) $(".toggle-container").hide();
+    });
+</script>
+</div>
+</div>
+<a href="#" class="backtop"><span id='backtop'><i class="fas fa-arrow-up backtop-icon" aria-hidden="true" style="font-size:20px;"></i></span></a>
+<div id="footer">
+<div class="attribute_footer">
+<img src="images/roundo/darko/roundo-darko-logo.png" class="footer_logo"><br>
+Тема від <a href="https://bitoony.com" target="_blank">Bitoony</a>, &copy;2021-2023
+<br>
+Працює на <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, &copy; 2002-2023.
+<br>
+<a href="https://andriycraft.page" target="_blank">AndriyCraft </a>, &copy;2020-2023
+</div>
+<div class="footer_links" style="margin-left: 20px">
+
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=18">Підтримка</a>
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=8">Новини сервера</a>
+<a href="https://www.andriycraft.page/forum/misc.php?action=markread">Позначити всі суб-форуми прочитаними</a>
+
+<p>Відновити акаунт? Подати апеляцію на бан? Маєте якесь питання? Зв'яжіться з нами тут:
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3b3e3733341a3b343e28332339283b3c2e742a3b3d3f">[email&#160;protected]</a></p>
+</div>
+
+<img src="https://www.andriycraft.page/forum/task.php" width="1" height="1" alt="" />
+
+</div>
+<br><br>
+
+<div id="thread_modes_popup" class="popup_menu" style="display: none;"><div class="popup_item_container"><a href="showthread.php?mode=linear&amp;tid=51&amp;pid=72#pid72" class="popup_item">Лінійний режим</a></div><div class="popup_item_container"><a href="showthread.php?mode=threaded&amp;tid=51&amp;pid=72#pid72" class="popup_item">Каскадний режим</a></div></div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="04bf7e925cabf659bda6c7ee-text/javascript">
+			$("#thread_modes").popupMenu();
+	</script>
+<script type="04bf7e925cabf659bda6c7ee-text/javascript">
+		let thread_deleted = "0";
+		if (thread_deleted == "1"){
+			$("#quick_reply_form, .new_reply_button, .thread_tools, .inline_rating").hide();
+			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
+		}
+	</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="04bf7e925cabf659bda6c7ee-|49" defer=""></script></body>
+</html>
