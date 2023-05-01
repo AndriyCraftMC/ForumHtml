@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Форум AndriyCraft - Пошук</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name='title' content='Форум AndriyCraft'>
+<meta name='keywords' content='minecraftserver, andriycraft, minecraft, server, ac, ac20, форум andriycraft, форум, andriycraft forum, andriycraft forums, andriycrafts, ukraine, ua, first ukrainian server, ukrainian server, ukrainian minecraft server, forum, форум'>
+<meta name='robots' content='follow; index'>
+<meta name='description' content='Цей є форум першого українського Майнкрафт сервера. Тут ви можете розмовляти про сервер і взагалом про Майнкрафт'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<script src="/cdn-cgi/apps/head/49KNk6obtyNm25fYzXs9z3MehMM.js"></script><script type="2d3b06aa94b64fe8d4d1a62d-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.js"></script>
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript" src="https://www.andriycraft.page/forum/jscripts/jquery.plugins.min.js"></script>
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript" src="https://www.andriycraft.page/forum/jscripts/general.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/global.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/thread_status.css?t=1673468752" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/css3.css?t=1673468748" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/extra.css?t=1673468749" />
+<link type="text/css" rel="stylesheet" href="https://www.andriycraft.page/forum/cache/themes/theme3/responsive.css?t=1673468751" />
+<link rel="icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="shortcut icon" href="https://www.andriycraft.page/forum/images/roundo/darko/roundo-darko-logo.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript">
+	lang.unknown_error = "Сталась невідома помилка.";
+
+	lang.select2_match = "Одним з результатів доступний, натисніть клавішу ENTER, щоб вибрати його.";
+	lang.select2_matches = "{1} результатів доступні, використовуйте клавіші зі стрілками для переміщення в гору і вниз.";
+	lang.select2_nomatches = "Співпадінь не знайдено";
+	lang.select2_inputtooshort_single = "Будь ласка, введіть один або кілька символів";
+	lang.select2_inputtooshort_plural = "Будь ласка, введіть {1} або більше символів";
+	lang.select2_inputtoolong_single = "Будь ласка, видаліть один символ";
+	lang.select2_inputtoolong_plural = "Будь ласка, видаліть {1} символів";
+	lang.select2_selectiontoobig_single = "Можна вибрати тільки один елемент";
+	lang.select2_selectiontoobig_plural = "Можна вибрати тільки {1} елементів";
+	lang.select2_loadmore = "Завантаження додаткових результатів...";
+	lang.select2_searching = "Йде пошук...";
+
+	var templates = {
+		modal: '<div class=\"modal\">\
+	<div style=\"overflow-y: auto; max-height: 400px;\">\
+		<table border=\"0\" cellspacing=\"0\" cellpadding=\"5\" class=\"tborder\">\
+			<tr>\
+				<td class=\"thead\"><strong>__title__</strong></td>\
+			</tr>\
+			<tr>\
+				<td class=\"trow1\">__message__</td>\
+			</tr>\
+			<tr>\
+				<td class=\"tfoot\">\
+					<div style=\"text-align: center\" class=\"modal_buttons\">__buttons__</div>\
+				</td>\
+			</tr>\
+		</table>\
+	</div>\
+</div>',
+		modal_button: '<input type=\"submit\" class=\"button\" value=\"__title__\"/>&nbsp;'
+	};
+
+	var cookieDomain = ".andriycraft.page";
+	var cookiePath = "/forum/";
+	var cookiePrefix = "";
+	var cookieSecureFlag = "1";
+	var deleteevent_confirm = "Ви впевнені, що хочете видалити цю подію?";
+	var removeattach_confirm = "Ви впевнені, що хочете видалити обрані вкладення з цього допису?";
+	var loading_text = 'Завантаження.<br />Будь ласка, зачекайте..';
+	var saving_changes = 'Збереження змін...';
+	var use_xmlhttprequest = "1";
+	var my_post_key = "7a4b8f54559184c2621d0ef129d6f9c4";
+	var rootpath = "https://www.andriycraft.page/forum";
+	var imagepath = "https://www.andriycraft.page/forum/images";
+  	var yes_confirm = "Так";
+	var no_confirm = "Ні";
+	var MyBBEditor = null;
+	var spinner_image = "https://www.andriycraft.page/forum/images/spinner.gif";
+	var spinner = "<img src='" + spinner_image +"' alt='' />";
+	var modal_zindex = 9999;
+</script>
+
+</head>
+<body>
+
+<div id="container">
+<div id="header">
+<div id="panel">
+<div class="upper">
+<div class="wrapper">
+
+<div class="float_right" id="guest_info_header">
+<a href="https://www.andriycraft.page/forum/member.php?action=login" class="login"><i class="fas fa-key"></i>&nbsp; Увійти</a>
+<a href="https://www.andriycraft.page/forum/member.php?action=register" class="register">Реєстрація</a>
+</div>
+<div class="title-img title-img-guest"><a href="index.php"><img src="images/roundo/darko/roundo-darko-logo.png" id="header_logo"></a></div>
+<ul class="menu top_links float_left">
+<li><a href="https://www.andriycraft.page/forum/index.php">Головна сторінка</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php">Пошук</a></li>
+<li><a href="https://www.andriycraft.page/forum/memberlist.php?sort=lastvisit&order=descending">Користувачі</a></li>
+<li><a href="https://www.andriycraft.page/forum/search.php?action=getnew">Нові пости</a></li>
+</ul>
+</div>
+</div>
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript">
+    $(document).ready(function (){
+        $("#welcomemsg").css("display", "block");
+		$("#newthread_guest_text").css("display", "inline-block");
+    });
+</script>
+
+</div>
+<div class="mobile_header mobile_only">
+<center>
+<div class="show_hide_mobile_header"><i class="fas fa-bars" style="font-size:10px;"></i>Меню
+</div>
+</center>
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript">$('.show_hide_mobile_header').click(function () {
+                            $('#mobile_header_links').slideToggle();
+                        });</script>
+<div id="mobile_header_links" style="display:none;">
+<a href="index.php"><i class="fas fa-home fa-fw"></i>Головна сторінка</a>
+<a href="search.php"><i class="fas fa-search fa-fw"></i>Пошук</a>
+<a href="memberlist.php?sort=lastvisit&order=descending"><i class="fas fa-users fa-fw"></i>Учасники</a>
+<a href="search.php?action=getnew" style="border-bottom: none;"><i class="fas fa-comments fa-fw"></i>Нові пости</a>
+</div>
+</div>
+</div>
+<div id="content">
+<div class="wrapper">
+
+
+<br />
+
+<form action="search.php">
+<input type="hidden" name="action" value="do_search" />
+<table border="0" cellspacing="0" cellpadding="5" class="tborder">
+<tr>
+<td colspan="2" class="thead"><strong>Пошук</strong></td>
+</tr>
+<tr>
+<td class="tcat" width="50%"><strong>Шукати за ключовими словами</strong></td>
+<td class="tcat" width="50%"><strong>Шукати за іменем автора</strong></td>
+</tr>
+<tr>
+<td class="trow1">
+<table><tr>
+<td valign="top"><input type="text" class="textbox" name="keywords" size="35" maxlength="250" /></td>
+</tr>
+<tr>
+<td>
+<span class="smalltext"><input type="radio" class="radio" name="postthread" value="1" checked="checked" /> Шукати в дописі <br><input type="radio" class="radio" name="postthread" value="2" /> Шукати в назві теми </span></td>
+</tr></table>
+</td>
+<td class="trow1">
+<input type="text" class="textbox" id="author" name="author" size="35" maxlength="19" /><br><br><span class="smalltext"><input type="checkbox" class="checkbox" name="matchusername" value="1" checked="checked" /> Має бути точне співпадіння імен </span>
+</td>
+</tr>
+<tr>
+<td class="tcat"><strong>Шукати в форумах</strong></td>
+<td class="tcat"><strong>Параметри пошуку</strong></td>
+</tr>
+<tr>
+<td class="trow1 no_bottom_border" rowspan="5">
+<select name="forums[]" size="20" multiple="multiple" style="height:auto;">
+<option value="all" selected="selected">Шукати у всіх відкритих форумах</option>
+<option value="all" disabled>----------------------</option>
+
+<option value="3"> Основне</option>
+
+<option value="4">&nbsp;&nbsp;&nbsp;&nbsp; Правила</option>
+
+<option value="5"> Новини</option>
+
+<option value="6">&nbsp;&nbsp;&nbsp;&nbsp; Новини форума</option>
+
+<option value="7">&nbsp;&nbsp;&nbsp;&nbsp; Новини сайта</option>
+
+<option value="8">&nbsp;&nbsp;&nbsp;&nbsp; Новини сервера</option>
+
+<option value="19">&nbsp;&nbsp;&nbsp;&nbsp; Інші новини</option>
+
+<option value="9"> Сервер</option>
+
+<option value="25">&nbsp;&nbsp;&nbsp;&nbsp; API</option>
+
+<option value="18">&nbsp;&nbsp;&nbsp;&nbsp; Підтримка </option>
+
+<option value="13">&nbsp;&nbsp;&nbsp;&nbsp; Ідеї для сервера</option>
+
+<option value="12">&nbsp;&nbsp;&nbsp;&nbsp; Обговорення</option>
+
+<option value="11">&nbsp;&nbsp;&nbsp;&nbsp; Скарги</option>
+
+<option value="10">&nbsp;&nbsp;&nbsp;&nbsp; Баги</option>
+
+<option value="15"> Інше</option>
+
+<option value="17">&nbsp;&nbsp;&nbsp;&nbsp; Оффтоп</option>
+
+<option value="20">&nbsp;&nbsp;&nbsp;&nbsp; Меми</option>
+
+</select>
+</td>
+<td class="trow1">
+<select name="findthreadst">
+<option value="1">Шукати теми з не менш як</option>
+<option value="2">Шукати теми з не більш як</option>
+</select> <input type="text" class="textbox" name="numreplies" size="2" maxlength="4" /> Відповідей<br>
+<br />
+<select name="postdate">
+<option value="0">Шукати дописи з будь-якою датою</option>
+<option value="1">Шукати вчорашні дописи</option>
+<option value="7">Шукати дописи останнього тижня</option>
+<option value="14">Шукати дописи за останній 2 тижні</option>
+<option value="30">Шукати дописи за останній місяць</option>
+<option value="90">Шукати дописи за останні 3 місяці</option>
+<option value="180">Шукати дописи за останні 6 місяців</option>
+<option value="365">Шукати дописи за останній рік</option>
+</select>
+<br>
+<br>
+<input type="radio" class="radio" name="pddir" value="1" checked="checked" />Та новіше
+<input type="radio" class="radio" name="pddir" value="0" />Та старіше
+<br>
+</td>
+</tr>
+<tr>
+<td class="tcat"><strong>Параметри сортування</strong></td>
+</tr>
+<tr>
+<td class="trow1">
+<select name="sortby">
+<option value="lastpost">По даті останнього допису</option>
+<option value="starter">По нік нейму автора</option>
+<option value="forum">По катерогії</option>
+<option value="views">Сортувати результати за кількістю переглядів</option>
+<option value="replies">Сортувати результати за кількістю відповідей</option>
+</select>
+<br>
+<br>в <input type="radio" class="radio" name="sortordr" value="asc" /> Зростаючому порядку <input type="radio" class="radio" name="sortordr" value="desc" checked="checked" /> Спадаючому порядку
+</td>
+</tr>
+<tr>
+<td class="tcat"><strong>Параметри відображення</strong></td>
+</tr>
+<tr>
+<td class="trow1">Показувати результати як:
+<br>
+<input type="radio" class="radio" name="showresults" value="threads" checked="checked">Теми
+<input type="radio" class="radio" name="showresults" value="posts" />Пости</td>
+</tr>
+</table>
+<div align="center"><br /><input type="submit" class="button" name="submit" value="Пошук" /></div>
+</form>
+
+<br clear="all">
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript">
+    $(document).scroll(function () {
+        var wd = $(this).scrollTop();
+        if (wd > 500) {
+            $('.backtop').show();
+        } else {
+            $('.backtop').hide();
+        }
+    });
+    jQuery(function ($) {
+        $(".leftbutton").hide();
+        $(".rightbutton").on("click", function () {
+            $(".sidebar").animate({
+                height: "hide",
+                opacity: 0
+            }, 150, function () {
+                $(".forums").animate({
+                    width: "100%"
+                }, 400)
+            });
+            $(this).hide();
+            $(".leftbutton").show();
+            Cookie.set("sidebar", "collapsed", 60 * 60 * 24 * 365);
+            return false;
+        });
+        $(".leftbutton").on("click", function () {
+            $(".forums").animate({
+                width: "76%"
+            }, 400, function () {
+                $(".sidebar").animate({
+                    height: "show",
+                    opacity: 1
+                }, 150)
+            });
+            $(this).hide();
+            $(".rightbutton").show();
+            Cookie.set("sidebar", "expanded", 60 * 60 * 24 * 365);
+            return false;
+        });
+        if (Cookie.get("sidebar") == "collapsed") {
+            $(".rightbutton").hide();
+            $(".leftbutton").show();
+            $(".forums").css("width", "100%");
+            $(".sidebar").hide();
+        }
+        if ($(".forums").length < 1) $(".toggle-container").hide();
+    });
+</script>
+</div>
+</div>
+<a href="#" class="backtop"><span id='backtop'><i class="fas fa-arrow-up backtop-icon" aria-hidden="true" style="font-size:20px;"></i></span></a>
+<div id="footer">
+<div class="attribute_footer">
+<img src="images/roundo/darko/roundo-darko-logo.png" class="footer_logo"><br>
+Тема від <a href="https://bitoony.com" target="_blank">Bitoony</a>, &copy;2021-2023
+<br>
+Працює на <a href="https://mybb.com" target="_blank" rel="noopener">MyBB</a>, &copy; 2002-2023.
+<br>
+<a href="https://andriycraft.page" target="_blank">AndriyCraft </a>, &copy;2020-2023
+</div>
+<div class="footer_links" style="margin-left: 20px">
+
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=18">Підтримка</a>
+<a href="https://www.andriycraft.page/forum/forumdisplay.php?fid=8">Новини сервера</a>
+<a href="https://www.andriycraft.page/forum/misc.php?action=markread">Позначити всі суб-форуми прочитаними</a>
+
+<p>Відновити акаунт? Подати апеляцію на бан? Маєте якесь питання? Зв'яжіться з нами тут:
+<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c1d181115123c1d12180e15051f0e1d1a08520c1d1b19">[email&#160;protected]</a></p>
+</div>
+
+<img src="https://www.andriycraft.page/forum/task.php" width="1" height="1" alt="" />
+
+</div>
+<br><br>
+
+<link rel="stylesheet" href="https://www.andriycraft.page/forum/jscripts/select2/select2.css?ver=1807">
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="2d3b06aa94b64fe8d4d1a62d-text/javascript" src="https://www.andriycraft.page/forum/jscripts/select2/select2.min.js?ver=1806"></script>
+<script type="2d3b06aa94b64fe8d4d1a62d-text/javascript">
+	MyBB.select2();
+	$("#author").select2({
+		placeholder: "Пошук користувача",
+		minimumInputLength: 2,
+		multiple: false,
+		allowClear: true,
+		ajax: {
+			url: "xmlhttp.php?action=get_users",
+			dataType: 'json',
+			data: function (term, page) {
+				return {
+					query: term,
+				};
+			},
+			results: function (data, page) {
+				return {results: data};
+			}
+		},
+		initSelection: function(element, callback) {
+			var value = $(element).val();
+			if (value !== "") {
+				callback({
+					id: value,
+					text: value
+				});
+			}
+		},
+	});
+
+</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="2d3b06aa94b64fe8d4d1a62d-|49" defer=""></script></body>
+</html>
